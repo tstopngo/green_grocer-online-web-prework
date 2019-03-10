@@ -49,8 +49,8 @@ end
 def checkout(cart, coupons)
   # code here
   new_cart= consolidate_cart(cart)
-  new_cart= apply_clearance(new_cart)
   new_cart = apply_coupons(new_cart, coupons)
+  new_cart= apply_clearance(new_cart)
   cart_total = 0
 
   new_cart.each do |cart_item, item_hash|
