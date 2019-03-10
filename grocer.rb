@@ -20,7 +20,7 @@ def apply_coupons(cart, coupons)
   coupon_hash = {}
   cart.each do |cart_item, item_hash|
       coupons.each do |coupon|
-        if coupon[:item] == cart_item && coupon[:num] <= [item_hash]][:count]
+        if coupon[:item] == cart_item && coupon[:num] <= [item_hash][:count]
           coupon_hash["#{cart_item} W/COUPON"] ||= {}
           coupon_hash["#{cart_item} W/COUPON"][:price] ||= coupon[:cost]
           coupon_hash["#{cart_item} W/COUPON"][:clearance] ||= cart[cart_item][:clearance]
