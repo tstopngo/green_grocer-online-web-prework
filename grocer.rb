@@ -54,7 +54,7 @@ def checkout(cart, coupons)
   cart_total = 0
 
   new_cart.each do |cart_item, item_hash|
-      cart_total += (new_cart[cart_item][:price] * new_cart[cart_item][:count])
+      cart_total += (new_cart[cart_item][:price] * new_cart[cart_item][:count]).to_f
   end
 
   if cart_total > 100
